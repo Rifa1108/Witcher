@@ -37,7 +37,6 @@ public class XML_Import extends FileImport {
                 if (event.isStartElement()) {
                     StartElement startElement = event.asStartElement();
                     String characteristic = startElement.getName().getLocalPart();
-                    System.out.println(characteristic + " start");
                     if (characteristic.equals("Creature")) {
                         creature = new Creature(chosenFile.getName());
                         allCharascteristics = new HashMap<String, Object>();
@@ -90,7 +89,6 @@ public class XML_Import extends FileImport {
                 }
                 if (event.isEndElement()) {
                     EndElement endElement = event.asEndElement();
-                    System.out.println(endElement.getName().getLocalPart()+" end");
                     if (endElement.getName().getLocalPart().equals("Creature")) {
                         creature.setAllChararterictics(allCharascteristics);
                         creatures.addCreature(creature);
