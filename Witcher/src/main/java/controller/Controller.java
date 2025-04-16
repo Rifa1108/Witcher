@@ -73,7 +73,7 @@ public class Controller {
 
     public boolean setInformation(HashMap<String, Object> allCharascteristics, String selectedCreatureSourceString, int index) {
         try {
-            creatures.getCreature(selectedCreatureSourceString, index).setAllChararterictics(allCharascteristics);
+            creatures.getCreature(selectedCreatureSourceString, index).checkNewChararterictics(allCharascteristics);
             return true;
         } catch (NumberFormatException | NullPointerException e) {
             return false;

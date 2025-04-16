@@ -26,7 +26,7 @@ public class YAML_Import extends FileImport {
             ArrayList<HashMap<String, Object>> newCreatures = yaml.load(inputStream);
             for (HashMap<String, Object> allCharascteristics : newCreatures) {
                 creature = new Creature(chosenFile.getName());
-                creature.setAllChararterictics(allCharascteristics);
+                creature.checkNewChararterictics(allCharascteristics);
                 creatures.addCreature(creature);
             }
             return true;

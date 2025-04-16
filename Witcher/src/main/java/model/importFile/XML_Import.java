@@ -90,7 +90,7 @@ public class XML_Import extends FileImport {
                 if (event.isEndElement()) {
                     EndElement endElement = event.asEndElement();
                     if (endElement.getName().getLocalPart().equals("Creature")) {
-                        creature.setAllChararterictics(allCharascteristics);
+                        creature.checkNewChararterictics(allCharascteristics);
                         creatures.addCreature(creature);
                     } else if (endElement.getName().getLocalPart().equals(Characteristic.RECIPE.getName())) {
                         allCharascteristics.put(Characteristic.RECIPE.getName(), newRecipe);

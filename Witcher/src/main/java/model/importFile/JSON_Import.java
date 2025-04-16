@@ -26,7 +26,7 @@ public class JSON_Import extends FileImport {
             for (Object addedCreature : newCreatures) {
                 creature = new Creature(chosenFile.getName());
                 HashMap<String, Object> allCharascteristics = (HashMap<String, Object>) addedCreature;
-                creature.setAllChararterictics(allCharascteristics);
+                creature.checkNewChararterictics(allCharascteristics);
                 creatures.addCreature(creature);
             }
             return true;
